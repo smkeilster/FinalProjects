@@ -1,0 +1,56 @@
+/* NavBar Styles */
+
+.header {
+  color: #404040;
+  background: white;
+  font-size: 3em;
+  font-family: Verdana;
+  margin: 20px;
+  padding-left: 5%;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+
+.navButton {
+  color: #404040;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-family: Verdana;
+  text-decoration: none;
+  /* border: hotpink 2px solid; */
+}
+
+.nav a:hover {
+  background-color: #404040;
+  color: white;
+  font-family: Verdana;
+  cursor: pointer;
+}
+
+.selected {
+  border: 3px solid #404040;
+  font-family: Verdana;
+}
+
+.menuIcon {
+  display: none;
+}
+.headerMobile{
+  display: none;
+}

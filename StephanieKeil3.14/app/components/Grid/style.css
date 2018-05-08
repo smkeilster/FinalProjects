@@ -1,0 +1,108 @@
+/* Grid Styles */
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gridItem {
+  width: 23%;
+  margin: 15px;
+}
+
+.gridImage {
+  width: 100%
+}
+
+.gridImage:hover {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.9);
+  transition: all 500ms ease-in-out;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* opaque area covering the entire screen */
+
+.modal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  transition: .6s ease-in-out;
+  font-family: Verdana;
+}
+
+/* black popup area */
+
+.modalContent {
+  display: flex;
+  padding: 22px;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1;
+  top: 0;
+  width: 70%;
+  max-width: 900px;
+  /* Full width */
+  height: auto;
+  /* Full height */
+  max-height: 100%;
+  background-color: rgb(0, 0, 0);
+  /* border: blue 1px solid; */
+}
+
+/* The Close Button */
+
+.close {
+  color: #f1f1f1;
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: 0.3s;
+  text-align: right;
+  /* border: yellow 2px solid; */
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  /* border: hotpink 2px solid; */
+}
+
+.infoTitle {
+  text-align: center;
+  font-size: 2.2em;
+  padding-bottom: 15px;
+  /* border: green 2px solid; */
+}
+
+.location {
+  font-size: 1.125em;
+  padding: 10px;
+  /* border: blue 2px solid; */
+}
+
+.fImageItem {
+  width: 70%;
+  max-width: 650px;
+  padding: 5px 5px 50px 5px;
+  height: auto;
+  /* border: hotpink 2px solid; */
+  overflow: hidden;
+}

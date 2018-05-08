@@ -1,0 +1,7 @@
+/* Experience Mobile Styles */
+@media(max-width:800px) {
+    .page {
+      padding-top: 50px;
+    }
+    
+  }

@@ -1,0 +1,44 @@
+/* Connect Styles */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.image {
+  margin: 50px 50px 25px 50px;
+  border-radius: 8px;
+  height: 300px;
+}
+
+.page{
+  font-family: Verdana;
+  display:flex;
+  justify-content: space-around;
+  /* border:blue solid 2px; */
+}
+.me{
+  /* border:hotpink solid 2px; */
+  max-width: 50%;
+  flex-direction: column;
+  align-content:center;
+  justify-content: space-around;
+}
+
+.logos{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.contact{
+  max-width: 50%;
+  display:flex;
+  flex-direction: column;
+
+}
+
+p{
+  margin: 5px;
+}
