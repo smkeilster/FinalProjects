@@ -20,4 +20,6 @@ class ContentController extends Controller
 
         return Response::json(['cities' => $cities, 'events' => $events]);
     }
+    // this is where I need to add my sql
+    
 }
