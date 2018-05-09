@@ -13,5 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('getSafe','ContentController@indes');
 Route::get('getContent','ContentController@index');
 Route::any('{path?}', 'MainController@index')->where("path", ".+");

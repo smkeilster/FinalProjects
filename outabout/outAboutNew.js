@@ -15,6 +15,7 @@ function processRequest(e) {
         cities = response.cities;
         events = response.events;
         buildCities()
+        console.log(response)
     }
 }
 

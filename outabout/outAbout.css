@@ -1,4 +1,8 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 
+}
 
 .headerName{
     font-size: 3.2em;
@@ -98,4 +102,7 @@ a:hover
 .imgSize{
     width: 3004px;
     height: 236px;
+}
+.testDiv{
+    height: 300px;
 }
