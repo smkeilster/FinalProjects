@@ -1,6 +1,6 @@
 body{
     font-family: 'Raleway', sans-serif;
-    font-weight: bold;
+    /* font-weight: bold; */
 
 }
 
@@ -69,6 +69,7 @@ span {
     background-color: tomato;
     color:white;
     font-family: 'Raleway', sans-serif;
+    font-weight: 100;
     min-height: 350px;
     padding: 10px;
     /* border: yellow 2px solid; */
@@ -81,6 +82,8 @@ span {
     background-color: #404040;
     color: white;
     font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+
     min-height: 350px;
     padding: 10px;
     overflow: hidden;
@@ -100,9 +103,13 @@ a:hover
 }
 
 .imgSize{
-    width: 3004px;
+    width: 304px;
     height: 236px;
 }
 .testDiv{
     height: 300px;
+}
+
+dd{
+    font-weight: 100;
 }

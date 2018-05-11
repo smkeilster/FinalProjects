@@ -1,4 +1,3 @@
-// search for #delete once this is good to go
 let xhr = new XMLHttpRequest();
 
 
@@ -28,6 +27,7 @@ function buildSpan(content) {
     let container;
     let row;
     let imageDiv;
+    let eventsDiv;
     let builtSpan = [];
     // for loop runs through the entire json object returned by the database.
     for (var i = 0; i < content.length; i++) {
@@ -72,11 +72,10 @@ function buildSpan(content) {
             // creates div
             imageDiv = document.createElement("div");
             // assigns bootstrap css
-            imageDiv.className = "col-md-4 hp";
+            imageDiv.className = "col-md-4";
             imageDiv.id = containerID;
             // builds div within the row
-            document.getElementById(row.id).appendChild(imageDiv);
-
+            row.appendChild(imageDiv);
             // pulls in the cityState from the database
             let cityState = content[i].cityState;
             // creates the element for the cityState
@@ -92,7 +91,7 @@ function buildSpan(content) {
                 // creates the image
                 let thumbnail = document.createElement("img");
                 // pulls in the image URL from the database
-                thumbnail.src = content[i].imageURL
+                thumbnail.src = content[i].imageURL;
                 // adds bootstrap css to img
                 thumbnail.className = "img-thumbnail imgSize";
                 // adds the thumbnail to the image div
@@ -100,103 +99,45 @@ function buildSpan(content) {
                 // shows the correct image source is being pulled
                 // console.log(content[i].imageURL)
             }
-            let eventsDiv = document.createElement("div");
-            eventsDiv.className = "col-md-8 hp";
+            // creates the Events Div
+            eventsDiv = document.createElement("div");
+            // applies bootstrap css
+            eventsDiv.className = "col-md-8";
+            // passes the container ID to the div
             eventsDiv.id = containerID;
-            document.getElementById(row.id).appendChild(eventsDiv);
+            row.appendChild(eventsDiv);
+            // this makes the list within the events div
+            eventsList = document.createElement("dl");
+            // passes the container ID to the list, lowest level
+            eventsList.id = containerID;
+            // appends list to div
+            eventsDiv.appendChild(eventsList);
         }
-        // creates new array #builtSpanArray
+        // this adds the dt event types
+        let type = content[i].type;
+        let eventType = document.createElement("dt");
+        let typeText = document.createTextNode(type);
+        eventType.appendChild(typeText);
+        eventsDiv.appendChild(eventType);
+        // this adds the dd description
+        let description = content[i].description;
+        let eventDescription = document.createElement("dd");
+        let descriptionText = document.createTextNode(description);
+        eventDescription.appendChild(descriptionText);
+        eventType.appendChild(eventDescription);
+        // this adds the a link out to the website
+        let linkDescription = document.createElement("a");
+        linkDescription.href = content[i].descriptionLink;
+        eventDescription.appendChild(linkDescription);
+        // this adds the icon
+        if (content[i].descriptionLink) {
+        let icon = document.createElement("i");
+        icon.className = "far fa-arrow-alt-circle-right";
+        linkDescription.appendChild(icon);
+        }
+        // creates new array #builtSpanArray with unique anchorLinks
         builtSpan.push(content[i].anchorLink);
-        // buildEventsContent(containerID, content);
+        // buildEventsContent(containerID, content, eventsDiv);
     }
 }
-
-
-// #start
-// // this builds the content of the events div, a list of event types and descriptions
-// function buildEventsContent(containerID, content, eventsDiv) {
-//     // #delete
-//     // let right = document.createElement("div");
-//     // right.className = "col-md-8";
-//     // #delete
-//     console.log(content);
-//     console.log(containerID);
-//     for (var i = 0; i < content.length; i++) {
-//         if (containerID === content.cityID) {
-//             let type = content[i].type;
-//             let eventType = document.createElement("dd");
-//             let eventText = document.createTextNode(type);
-//             eventType.appendChild(eventText);
-//         }
-//         document.getElementById(containerID).appendChild(eventType);
-//     }
-// }
-
-// #delete if all goes well everything below this commented out can be deleted
-// function buildRow(containerID) {
-//     if (containerID.indexOf(containerID) >= 0) {
-//     }
-//     else {
-//     let row = document.createElement("div");
-//     row.className = "row";
-//     console.log(containerID)
-//     document.getElementById(containerID).append(row);
-//     }
-// }
-// function buildCityDiv(content) {
-//     let builtDivs = [];
-//     let varcity = document.createElement("div");
-//     for (var i = 0; i <= content.length; i++) {
-//         if (builtDivs.indexOf(content[i].cityID) >= 0) {
-//         }
-//         else {
-//             let anchor ='id="' + content[i].anchorLink + '" class="hp testDiv"';
-//             let varcityTextNode =document.createTextNode(anchor);
-//             varcity.appendChild(varcityTextNode);
-
-//             console.log(varcity);
-//             builtDivs.push(varcity);
-//             // $('#left').append('<div id="' + content[i].anchorLink + '" class="hp testDiv"></div>');
-//         }
-
-//         document.getElementById("pageDiv").appendChild(varcity);
-//         buildImageDiv(varcity);
-//         console.log(varcity);
-//     }
-// }
-// function buildImageDiv(containerID) {
-//     console.log(containerID);
-//     // #delete
-//     // let imageDiv = document.createElement("div");
-//     // imageDiv.className = "col-md-4 hp";
-//     let builtSpan = [];
-//     for (var i = 0; i < content.length; i++) {
-//         console.log("i top " + i);
-//         if (builtCities.indexOf(content[i].cityID) >= 0) {
-//         }
-//         else {
-//             // this builds the left section
-//             let cityState = content[i].cityState;
-//             let header = document.createElement("h4");
-//             let textnode = document.createTextNode(cityState);
-//             header.appendChild(textnode);
-//             header.className = "h4";
-//             imageDiv.appendChild(header);
-//             // console.log(header);
-
-//             if (content[i].imageURL) {
-//                 let thumbnail = document.createElement("img");
-//                 thumbnail.src = content[i].imageURL
-//                 thumbnail.className = "img-thumbnail imgSize";
-//                 left.appendChild(thumbnail)
-//                 console.log(content[i].imageURL)
-//             }
-//             builtCities.push(content[i].cityID);
-//             // buildEventsDiv(content[i].cityID)
-//         }
-//         console.log("i" + i);
-//         document.getElementById(varcity.id).appendChild(left);
-//     }
-// }
-
 buildContent()
