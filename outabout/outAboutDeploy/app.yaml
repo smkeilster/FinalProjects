@@ -1,0 +1,32 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+# Ensure we skip ".env", which is only for local development
+skip_files:
+  - .env
+
+env_variables:
+  # Put production environment variables here.
+  APP_LOG: errorlog
+  APP_KEY: base64:XyC1jefPqnBOJRK8LImcyMaQRo3K6VUWGFL/8DdMpCY=
+  STORAGE_DIR: /tmp
+  CACHE_DRIVER: file
+  SESSION_DRIVER: file
+  ## Set these environment variables according to your CloudSQL configuration.
+  DB_HOST: 35.199.9.20
+  DB_DATABASE: outabout
+  DB_USERNAME: root
+  DB_PASSWORD: password
+  DB_SOCKET: "/cloudsql/out-and-about-203118:us-east4:outabout"
+  #MySqlVarialbes
+  MYSQL_DSN: mysql:unix_socket=/cloudsql/out-and-about;dbname=outabout
+  MYSQL_USER: root
+  MYSQL_PASSWORD: password
+  
+beta_settings:
+    # for Cloud SQL, set this value to the Cloud SQL connection name,
+    # e.g. "project:region:cloudsql-instance"
+    cloud_sql_instances: "out-and-about-203118:us-east4:outabout"
