@@ -44,8 +44,10 @@ export default class Grid extends React.PureComponent {
           <div className="content">
             <div className="infoTitle">{this.state.fImages[x].title}</div>
             <div className="location">{this.state.fImages[x].location}</div>
-            <img className="fImageItem" src={this.state.fImages[x].fimage} />
+            <div className="imageItem">
+            <img className="fImage" src={this.state.fImages[x].fimage} />
           </div>
+        </div>
         </div>
     });
   }

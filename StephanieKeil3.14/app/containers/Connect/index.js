@@ -21,7 +21,7 @@ export default class Connect extends React.PureComponent {
 
   render() {
     return (
-      <div className="container">
+      <div>
         <Helmet title="Connect" meta={[{ name: 'description', content: 'Description of Connect' }]} />
         <NavBar/>
         <div className="page">
@@ -37,13 +37,15 @@ export default class Connect extends React.PureComponent {
             </div>
           </div>
           <div className="contact">
-            <p>Name:</p>
+            <form action="">
+            <label>Name:</label>
             <input type="text" className="field" />
-            <p>Email:</p>
+            <label>Email:</label>
             <input type="text" className="field" />
-            <p>Message:</p>
-            <input type="text" className="field" />
-
+            <label>Message:</label>
+            <textarea type="text" className="field"> </textarea>
+            <input type="submit" value="Submit"/>
+            </form>
           </div>
         </div>
       </div>

@@ -28,7 +28,7 @@
 .modal {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -47,15 +47,17 @@
   display: flex;
   padding: 22px;
   flex-direction: column;
+  /* align-content: center; */
   justify-content: space-around;
   z-index: 1;
   top: 0;
-  width: 70%;
+  width: 50%;
   max-width: 900px;
   /* Full width */
-  height: auto;
+  /* height: auto; */
   /* Full height */
-  max-height: 100%;
+  height: auto;
+  /* overflow-y: auto; */
   background-color: rgb(0, 0, 0);
   /* border: blue 1px solid; */
 }
@@ -88,21 +90,24 @@
 .infoTitle {
   text-align: center;
   font-size: 2.2em;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
   /* border: green 2px solid; */
 }
 
 .location {
   font-size: 1.125em;
-  padding: 10px;
+  padding-bottom:10px;
   /* border: blue 2px solid; */
 }
 
-.fImageItem {
-  width: 70%;
+.imageItem
+{
+  width: 80%;
+}
+.fImage {
+  width: 100%;
   max-width: 650px;
-  padding: 5px 5px 50px 5px;
-  height: auto;
+  padding: 5px 5px 20px 5px;
   /* border: hotpink 2px solid; */
-  overflow: hidden;
+  /* overflow-y: scroll; */
 }

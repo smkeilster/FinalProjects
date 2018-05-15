@@ -22,7 +22,7 @@ env_variables:
   DB_PASSWORD: password
   DB_SOCKET: "/cloudsql/out-and-about-203118:us-east4:outabout"
   #MySqlVarialbes
-  MYSQL_DSN: mysql:unix_socket=/cloudsql/out-and-about;dbname=outabout
+  MYSQL_DSN: mysql:unix_socket=/cloudsql/out-and-about-203118:us-east4:outabout;dbname=outabout
   MYSQL_USER: root
   MYSQL_PASSWORD: password
   
