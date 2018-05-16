@@ -1,8 +1,8 @@
 /* Connect Styles */
-
 .page {
-  font-family: Verdana;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
   min-height: 100vh;
@@ -13,9 +13,10 @@
 .me {
   /* border: hotpink solid 2px; */
   max-width: 50%;
+  display:flex;
   flex-direction: column;
   align-content: center;
-  justify-content: space-around;
+  height: auto;
 }
 
 .image {
@@ -41,6 +42,7 @@
 
 textarea {
   height: 150px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 input[type=text],textarea {
@@ -52,7 +54,7 @@ input[type=text],textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 input[type=submit] {

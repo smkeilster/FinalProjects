@@ -21,7 +21,7 @@ export default class Connect extends React.PureComponent {
 
   render() {
     return (
-      <div>
+      <div >
         <Helmet title="Connect" meta={[{ name: 'description', content: 'Description of Connect' }]} />
         <NavBar/>
         <div className="page">

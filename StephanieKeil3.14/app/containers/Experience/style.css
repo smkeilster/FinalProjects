@@ -1,11 +1,35 @@
 /* Experience Styles */
 
-.container {
+.page{
   display:flex;
   flex-direction:column;
   min-height:100vh;
+  font-family: Verdana;
+  color: #404040;
 }
 
-.page{
-  font-family: Verdana;
+.resume{
+  width: 80%;
+}
+
+.section{
+  margin: 20px;
+}
+
+p{
+  margin-bottom:7px;
+  padding-left: 30px;
+}
+ul{
+  margin-bottom:7px;
+  padding-left: 50px;
+}
+
+
+h5{
+  font-weight: lighter;
+  padding-left: 30px;
+}
+h3{
+  padding-left: 30px;
 }
