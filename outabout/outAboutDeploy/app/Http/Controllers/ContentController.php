@@ -43,7 +43,7 @@ class ContentController extends Controller
             // $sql = "SELECT * FROM `cities` INNER JOIN `events` ON cities.cityID=events.cityID";
             // $content->db =Mage::get
 
-            $content = DB::select('SELECT * FROM `cities` INNER JOIN `events` ON cities.cityID=events.cityID');
+            $content = DB::select('SELECT * FROM `cities` INNER JOIN `events` ON cities.cityID=events.cityID ORDER BY cities.cityID, events.eventOrder');
         return Response::json(['content'=> $content]);
     }
 }

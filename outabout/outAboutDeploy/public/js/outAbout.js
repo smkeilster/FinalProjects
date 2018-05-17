@@ -4,7 +4,8 @@ let xhr = new XMLHttpRequest();
 
 //get function from the database 
 function buildContent() {
-    xhr.open('GET', "https://out-and-about-203118.appspot.com/api/getContent", true);
+    xhr.open('GET', "http://127.0.0.1:8000/api/getContent", true);
+    // xhr.open('GET', "https://out-and-about-203118.appspot.com/api/getContent", true);
     xhr.send();
     xhr.addEventListener("readystatechange", processRequest, false);
 }

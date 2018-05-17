@@ -94,12 +94,12 @@ span {
     border:hotpink 2px solid;
 }
 a{
-    color: #404040;
+    color: white;
 }
 
 a:hover
 {
-    color: white;
+    color: black;
 }
 
 .imgSize{
@@ -112,4 +112,8 @@ a:hover
 
 dd{
     font-weight: 100;
+}
+
+.col-md-8{
+    padding-top: 25px;
 }
