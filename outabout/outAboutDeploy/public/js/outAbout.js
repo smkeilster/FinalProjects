@@ -36,6 +36,7 @@ function buildSpan(content) {
         if (builtSpan.indexOf(content[i].anchorLink) >= 0) {
         }
         // relys on the new built Span array to determine if the div already exists #builtSpanArray
+        //move events into here but right an if statement to determing if the current city id + event id already exist, if it does, do nothing
         else {
             // creates the span using the unique anchorLink column as the id.
             anchor = content[i].anchorLink;
