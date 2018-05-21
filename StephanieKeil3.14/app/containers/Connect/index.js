@@ -28,6 +28,7 @@ export default class Connect extends React.PureComponent {
           <div className="me">
             <img src={require('../Images/SK.jpg')} alt={"Stephanie Keil"} className="image" />
             <div className="logos">
+            <p> Let's get in touch. <a href="https://www.linkedin.com/in/keilstephanie/"> LinkedIn</a> messages work best.</p>
             <a href="https://www.linkedin.com/in/keilstephanie/">
             <img src={require('../Images/linkedin.png')} />
             </a>
@@ -36,7 +37,8 @@ export default class Connect extends React.PureComponent {
             </a>
             </div>
           </div>
-          <div className="contact">
+
+          {/* <div className="contact">
             <form action="">
             <label>Name:</label>
             <input type="text" className="field" />
@@ -46,7 +48,7 @@ export default class Connect extends React.PureComponent {
             <textarea type="text" className="field"> </textarea>
             <input type="submit" value="Submit"/>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
     );
