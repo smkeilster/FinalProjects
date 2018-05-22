@@ -23,18 +23,20 @@ export default class Connect extends React.PureComponent {
     return (
       <div >
         <Helmet title="Connect" meta={[{ name: 'description', content: 'Description of Connect' }]} />
-        <NavBar/>
+        <NavBar />
         <div className="page">
           <div className="me">
-            <img src={require('../Images/SK.jpg')} alt={"Stephanie Keil"} className="image" />
-            <div className="logos">
-            <p> Let's get in touch. <a href="https://www.linkedin.com/in/keilstephanie/"> LinkedIn</a> messages work best.</p>
-            <a href="https://www.linkedin.com/in/keilstephanie/">
-            <img src={require('../Images/linkedin.png')} />
-            </a>
-            <a href="https://github.com/smkeilster">
-            <img src={require('../Images/gitHub.png')} />
-            </a>
+            <div className="pictureFrame">
+              <img width="299" height="450" src={require('../Images/SK.jpg')} alt={"Stephanie Keil"} className="image" />
+            </div>
+            <p className="connect"> Let's get in touch. <a href="https://www.linkedin.com/in/keilstephanie/"> LinkedIn</a> messages work best.</p>{"\n"}
+            <div className="logoFrame">
+              <a href="https://www.linkedin.com/in/keilstephanie/">
+                <img className="logo" src={require('../Images/linkedin.png')} />
+              </a>
+              <a href="https://github.com/smkeilster">
+                <img className="logo" src={require('../Images/gitHub.png')} />
+              </a>
             </div>
           </div>
 

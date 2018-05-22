@@ -4,10 +4,20 @@
   .page {
     padding-top: 50px;
   }
-  .image {
-    margin: 15px;
-    border-radius: 8px;
-    max-height: 200px;
-  }
+
 }
 
+@media(max-width:400px) {
+ 
+  .pictureFrame {
+    width: 125px;
+  }
+
+  .logoFrame{
+    height: 50px;
+  }
+  .logo{
+    height:40px;
+    width:auto;
+  }
+}

@@ -1,0 +1,18 @@
+/* PageTop Styles */
+
+.arrowLocation {
+    width: 99%;
+    scroll-behavior: auto;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    /* border:hotpink solid 1px; */
+}
+.arrow{
+    font-size: 2.5em;
+    margin: 15px;
+    text-decoration: none;
+    color: #404040;
+
+}

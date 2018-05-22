@@ -11,6 +11,8 @@ import './style.css';
 import './styleM.css';
 
 import NavBar from 'components/NavBar';
+import LeftIcon from 'react-icons/lib/fa/chevron-left';
+import RightIcon from 'react-icons/lib/fa/chevron-right';
 
 export default class Home extends React.PureComponent {
   render() {
@@ -18,8 +20,97 @@ export default class Home extends React.PureComponent {
       <div className="container">
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
         <NavBar/>
-        <div className="page">
-          <p>This will be the about me section. </p>
+        <div>
+        <Slider/>
+        </div>
+      </div>
+    );
+  }
+}
+
+
+
+class Slider extends React.PureComponent {
+  constructor()
+  {
+      super();
+      this.state = {
+        images: ['Totemc.jpg', 'Jellyfishc.jpg', 'Glassc.jpg'],
+        activeIndex:0
+      }
+  }
+  renderImage = () =>
+  {
+    var images = this.state.images;
+    var activeIndex = this.state.activeIndex;
+
+    for(var i = 0; i<images.length; i++)
+    {
+      if(i === activeIndex)
+      {
+        return images[i];
+      }
+    }
+  }
+
+  nextImage = () =>
+  {
+    var images = this.state.images;
+    var activeIndex = this.state.activeIndex;
+
+    if(activeIndex + 1 <images.length)
+    {
+      this.setState({
+        activeIndex: activeIndex + 1,
+      })
+    }
+    else
+    {
+      this.setState({
+        activeIndex:0,
+      })
+    }
+  }
+
+  previousImage = () =>
+  {
+    var images = this.state.images;
+    var activeIndex = this.state.activeIndex;
+
+    if(activeIndex - 1 >= 0)
+    {
+      this.setState({
+        activeIndex: activeIndex -1,
+      })
+    }
+    else
+    {
+      this.setState({
+        activeIndex: images.length -1,
+      })
+    }
+  }
+
+  componentDidMount()
+  {
+    this.autoSlide();
+  }
+
+  autoSlide = () =>
+  {
+    var _this = this;
+    setInterval(function() {
+      _this.nextImage();
+    },5000);
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="slider">
+          <img className="slideImage" src={require('../images/'+this.renderImage())}/>
+          <LeftIcon className="sliderIcon" onClick={this.previousImage}/>
+          <RightIcon className="sliderIcon" onClick={this.nextImage}/>
         </div>
       </div>
     );

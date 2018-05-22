@@ -8,6 +8,7 @@ import React from 'react';
 import Helmet from 'react-helmet'; import './style.css';
 import './styleM.css';
 import NavBar from 'components/NavBar';
+import PageTop from 'components/PageTop';
 export default class Experience extends React.PureComponent {
 
   render() {
@@ -15,8 +16,9 @@ export default class Experience extends React.PureComponent {
       <div>
         <Helmet title="Experience" meta={[{ name: 'description', content: 'Description of Experience' }]} />
         <NavBar />
-        <div  className="page">
-        <Resume />
+        <div className="page">
+        <Resume/>
+        <PageTop/>
         </div>
       </div>
     );
