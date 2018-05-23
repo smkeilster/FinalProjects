@@ -1,8 +1,10 @@
 /* Experience Styles */
 
-.page{
+.pageE{
   display:flex;
   flex-direction:column;
+  align-content: center;
+  width: 100%;
   min-height:100vh;
   font-family: Verdana;
   color: #404040;

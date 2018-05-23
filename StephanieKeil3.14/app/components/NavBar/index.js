@@ -49,7 +49,7 @@ export default class NavBar extends React.PureComponent {
   }
   render() {
     return (
-      <div>
+      <div className="topLayer">
         <div className="mStick">
           <div className="header"> Stephanie Keil</div>
           <div className="headerMobile"> SK</div>

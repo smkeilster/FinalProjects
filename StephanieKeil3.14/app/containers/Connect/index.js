@@ -24,7 +24,7 @@ export default class Connect extends React.PureComponent {
       <div >
         <Helmet title="Connect" meta={[{ name: 'description', content: 'Description of Connect' }]} />
         <NavBar />
-        <div className="page">
+        <div className="pageC">
           <div className="me">
             <div className="pictureFrame">
               <img width="299" height="450" src={require('../Images/SK.jpg')} alt={"Stephanie Keil"} className="image" />

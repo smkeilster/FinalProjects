@@ -4,12 +4,16 @@
   .nav {
     display: none;
   }
+  .topLayer{
+    position: absolute;
+  }
   .mStick {
     width: 100%;
     scroll-behavior: auto;
     position: fixed;
     display: flex;
     background: white;
+    z-index: 200;
   }
   .header {
     display:flex;
@@ -36,8 +40,7 @@
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
-    width: 90%;
-    z-index: 2;
+    width: 100%;
     padding: 20px;
     margin:auto;
     /* border: hotpink 2px solid; */

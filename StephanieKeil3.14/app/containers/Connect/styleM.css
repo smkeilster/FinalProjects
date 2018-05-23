@@ -1,14 +1,13 @@
 /* Connect Mobile Styles */
 
 @media(max-width:800px) {
-  .page {
+  .pageC {
     padding-top: 50px;
   }
 
 }
 
 @media(max-width:400px) {
- 
   .pictureFrame {
     width: 125px;
   }
