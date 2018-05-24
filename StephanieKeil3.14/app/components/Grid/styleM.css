@@ -4,6 +4,9 @@
   .grid {
     padding-top: 40px;
   }
+  .modal{
+    padding-top:40px;
+  }
 }
 
 @media (max-width: 450px) {

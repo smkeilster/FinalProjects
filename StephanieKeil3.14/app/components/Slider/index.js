@@ -15,7 +15,7 @@ import RightIcon from 'react-icons/lib/fa/chevron-right';
 export default class Slider extends React.PureComponent {
   render() {
     return (
-      <div>
+      <div className="sliderHome">
         <div className="slider">
           <img className="slideImage" src={require('../../containers/Images/' + this.renderImage())} />
           <LeftIcon className="sliderIcon" onClick={this.previousImage} />
