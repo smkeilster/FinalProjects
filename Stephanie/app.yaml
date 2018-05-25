@@ -1,0 +1,15 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+# Ensure we skip ".env", which is only for local development
+skip_files:
+  - .env
+
+env_variables:
+  # Put production environment variables here.
+  APP_LOG: errorlog
+  APP_KEY: base64:OHEiTb/RwL8ZOR+k3k0G1e8kLvJIR/lvrJC0+tQ5OXM=
+  STORAGE_DIR: /tmp

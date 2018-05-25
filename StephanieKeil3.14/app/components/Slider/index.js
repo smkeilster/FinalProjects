@@ -75,18 +75,4 @@ export default class Slider extends React.PureComponent {
     }
   }
 
-  // componentDidMount()
-  // {
-  //   this.autoSlide();
-  // }
-
-  // autoSlide = () =>
-  // {
-  //   var _this = this;
-  //   setInterval(function() {
-  //     _this.nextImage();
-  //   },5000);
-  // }
-
-
 }

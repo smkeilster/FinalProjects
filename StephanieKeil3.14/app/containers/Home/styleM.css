@@ -5,3 +5,13 @@
     padding-top: 50px;  
 }
 }
+
+@media(max-width:600px) {
+    .text1{
+        font-size: 1em;
+    }
+    
+    .text2{
+        font-size: 1em;
+    }
+    }

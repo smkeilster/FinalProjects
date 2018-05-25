@@ -1,1 +1,15 @@
 /* Slider Mobile Styles */
+@media (max-width: 450px) {
+
+    .slider
+    {
+    width: 80%;
+    min-height: 250px;
+    }
+
+    .sliderIcon
+    {
+    font-size: 1em;
+    }
+
+}

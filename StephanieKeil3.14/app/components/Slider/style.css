@@ -4,9 +4,10 @@
   display:flex;
   flex-direction:column;
   align-items: center;
-  justify-content: flex-start;
-  height:100vh;
+  justify-content: start;
+  /* height:100vh; */
   width: 100%;
+  /* border: green 2px solid; */
 }
 
 .slider
@@ -16,11 +17,11 @@
   justify-content: space-between;
   align-items: center;
   width: 70%;
-  /* max-width: 800px; */
-  height: 500px;
+  max-width: 600px;
+  min-height: 400px;
   overflow: hidden;
   position: relative;
-  top: 50px;
+  /* top: 50px; */
   /* z-index: .5; */
   /* border: hotpink 2px solid; */
 }

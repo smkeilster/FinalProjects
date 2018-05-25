@@ -29,12 +29,12 @@ export default class Connect extends React.PureComponent {
             <div className="pictureFrame">
               <img width="299" height="450" src={require('../Images/SK.jpg')} alt={"Stephanie Keil"} className="image" />
             </div>
-            <p className="connect"> Let's get in touch. <a href="https://www.linkedin.com/in/keilstephanie/"> LinkedIn</a> messages work best.</p>{"\n"}
+            <p className="connect"> Let's get in touch. <a href="http://www.linkedin.com/in/keilstephanie/"> LinkedIn</a> messages work best.</p>{"\n"}
             <div className="logoFrame">
-              <a href="https://www.linkedin.com/in/keilstephanie/">
+              <a href="http://www.linkedin.com/in/keilstephanie/">
                 <img className="logo" src={require('../Images/linkedin.png')} />
               </a>
-              <a href="https://github.com/smkeilster">
+              <a href="http://github.com/smkeilster">
                 <img className="logo" src={require('../Images/gitHub.png')} />
               </a>
             </div>
